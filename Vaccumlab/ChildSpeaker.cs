@@ -23,18 +23,10 @@ public class ChildSpeaker
                 }
             }
         }
-        
-        //ignore first character
-        for (int i = 0; i < word.Length; i++)
+
+        foreach (var @char in word)
         {
-            if (Consonants.Contains(word[i]))
-            {
-                sb.Append(firstCharacter);
-            }
-            else
-            {
-                sb.Append(word[i]);
-            }
+            sb.Append(Consonants.Contains(@char) ? firstCharacter : @char);
         }
 
         return sb.ToString();
