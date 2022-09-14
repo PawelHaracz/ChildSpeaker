@@ -32,7 +32,7 @@ public class ChildSpeakerTests
     [InlineData("bratislava", "babibaba")]
     [InlineData("ahoj", "haho")]
     [InlineData("ahojo", "hahoho")]
-    public void group_of_consecutive_consonants_should_be_replace_as_one_consonants_and_the_remove_last_consonants(string word, string expected)
+    public void group_of_consecutive_consonants_should_be_replaced_as_one_consonants_and_the_remove_last_consonants(string word, string expected)
     {
         var act = Act(word);
         Assert.Equal(expected, act);   
@@ -42,7 +42,7 @@ public class ChildSpeakerTests
     [InlineData("naomi", "noni")]
     [InlineData("aikido", "kikiko")]
     [InlineData("ahojoo", "hahoho")]
-    public void group_of_vowels_merge_to_last_vowel(string word, string expected)
+    public void group_of_consecutive_vowels_should_be_replaced_as_one_last_vowel(string word, string expected)
     {
         var act = Act(word);
         Assert.Equal(expected, act);   

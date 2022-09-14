@@ -1,6 +1,10 @@
 namespace Vaccumlab;
 using System.Text;
 
+/// <summary>
+/// Class merge group of consecutive characters on the word,
+/// when word ends on the consonants then remove consonants
+/// </summary>
 internal class CharacterMerger : ICharacterMerger
 {
     public string Merge(string word)
