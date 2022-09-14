@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vaccumlab.Tests", "Vaccumlab.Tests\Vaccumlab.Tests.csproj", "{3C77EFE0-93FE-4C38-82EB-24B60FE5D8F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vaccumlab", "Vaccumlab\Vaccumlab.csproj", "{A21D0F1C-E0D2-4279-B25D-C26280732405}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C77EFE0-93FE-4C38-82EB-24B60FE5D8F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C77EFE0-93FE-4C38-82EB-24B60FE5D8F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C77EFE0-93FE-4C38-82EB-24B60FE5D8F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C77EFE0-93FE-4C38-82EB-24B60FE5D8F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A21D0F1C-E0D2-4279-B25D-C26280732405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A21D0F1C-E0D2-4279-B25D-C26280732405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A21D0F1C-E0D2-4279-B25D-C26280732405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A21D0F1C-E0D2-4279-B25D-C26280732405}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
