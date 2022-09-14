@@ -3,7 +3,7 @@ using Xunit;
 
 public class ChildSpeakerTests
 {
-    private readonly ChildSpeaker _childSpeak = new();
+    private readonly IChildSpeaker _childSpeak = new ChildSpeaker();
     private string Act(string word) => _childSpeak.Process(word);
 
     [Theory]
@@ -33,6 +33,16 @@ public class ChildSpeakerTests
     [InlineData("ahoj", "haho")]
     [InlineData("ahojo", "hahoho")]
     public void group_of_consecutive_consonants_should_be_replace_as_one_consonants_and_the_remove_last_consonants(string word, string expected)
+    {
+        var act = Act(word);
+        Assert.Equal(expected, act);   
+    }
+    
+    [Theory]
+    [InlineData("naomi", "noni")]
+    [InlineData("aikido", "kikiko")]
+    [InlineData("ahojoo", "hahoho")]
+    public void group_of_vowels_merge_to_last_vowel(string word, string expected)
     {
         var act = Act(word);
         Assert.Equal(expected, act);   
