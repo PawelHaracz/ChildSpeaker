@@ -8,12 +8,8 @@ public class ChildSpeakerTests
 
     [Theory]
     [InlineData("mapa", "mama")]
-    [InlineData("nudes", "nunen")]
-    [InlineData("nook", "noon")]
-    //[InlineData("grater", "gageg")]
-   
-    //[InlineData("lajdak", "lala")]
-    //[InlineData("lampa", "lala")]
+    [InlineData("nudes", "nune")]
+    [InlineData("nook", "noo")]
     public void uses_exactly_one_unique_consonant_in_the_word(string word, string expected)
     {
         var act = Act(word);
@@ -29,5 +25,16 @@ public class ChildSpeakerTests
         Assert.Equal(expected, act);
     }
 
-
+    [Theory]
+    [InlineData("grater", "gage")]
+    [InlineData("lajdak", "lala")]
+    [InlineData("lampa", "lala")]
+    [InlineData("bratislava", "babibaba")]
+    [InlineData("ahoj", "haho")]
+    [InlineData("ahojo", "hahoho")]
+    public void group_of_consecutive_consonants_should_be_replace_as_one_consonants_and_the_remove_last_consonants(string word, string expected)
+    {
+        var act = Act(word);
+        Assert.Equal(expected, act);   
+    }
 }
