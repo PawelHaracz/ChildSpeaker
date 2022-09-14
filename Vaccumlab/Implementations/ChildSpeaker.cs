@@ -36,6 +36,11 @@ internal class ChildSpeaker : IChildSpeaker
             sb.Append(Constants.Consonants.Contains(@char) ? firstCharacter : @char);
         }
 
+        if (Constants.Consonants.Contains(sb[^1]))
+        {
+            sb.Remove(sb.Length - 1, 1);
+        }
+        
         return sb.ToString();
     }
 

@@ -11,7 +11,7 @@ public class ChildSpeakerTests
     [Theory]
     [InlineData("mapa", "mama")]
     [InlineData("nudes", "nune")]
-    [InlineData("nook", "noo")]
+    [InlineData("nook", "no")]
     public void uses_exactly_one_unique_consonant_in_the_word(string word, string expected)
     {
         var act = Act(word);

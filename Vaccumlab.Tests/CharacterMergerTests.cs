@@ -12,7 +12,7 @@ public class CharacterMergerTests
     [Theory]
     [InlineData("mama", "mama")]
     [InlineData("mapa", "mapa")]
-    [InlineData("obelis", "obeli")]
+    [InlineData("obelisk", "obelis")]
     [InlineData("ababa", "ababa")]
     public void word_does_not_have_any_group_of_consecutive_characters(string word, string expected)
     {
@@ -33,7 +33,7 @@ public class CharacterMergerTests
     [Theory]
     [InlineData("aaba", "aba")]
     [InlineData("bya", "ba")]
-    [InlineData("naomi", "noni")]
+    [InlineData("naomi", "nomi")]
     public void word_contains_group_of_consecutive_should_be_merged_to_last_vowel(string word, string expected)
     {
         var act = Act(word);
