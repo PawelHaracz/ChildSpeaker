@@ -1,4 +1,4 @@
-namespace Vaccumlab;
+namespace Vaccumlab.Contracts;
 
 public interface IChildSpeaker
 {

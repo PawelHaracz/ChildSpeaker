@@ -1,5 +1,6 @@
 namespace Vaccumlab.Tests;
-
+using Contracts;
+using Implementations;
 using Xunit;
 
 public class CharacterMergerTests
@@ -24,6 +25,16 @@ public class CharacterMergerTests
     [InlineData("abwrdta", "aba")]
     [InlineData("bdabwrdta", "baba")]
     public void word_contains_group_of_consecutive_consonants_should_be_merged(string word, string expected)
+    {
+        var act = Act(word);
+        Assert.Equal(expected, act); 
+    }
+    
+    [Theory]
+    [InlineData("aaba", "aba")]
+    [InlineData("bya", "ba")]
+    [InlineData("naomi", "noni")]
+    public void word_contains_group_of_consecutive_should_be_merged_to_last_vowel(string word, string expected)
     {
         var act = Act(word);
         Assert.Equal(expected, act); 

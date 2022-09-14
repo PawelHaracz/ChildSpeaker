@@ -1,5 +1,7 @@
 namespace Vaccumlab.Tests;
 using Xunit;
+using Contracts;
+using Implementations;
 
 public class ChildSpeakerTests
 {

@@ -1,9 +1,13 @@
-namespace Vaccumlab;
 using System.Text;
+using Vaccumlab.Contracts;
+
+namespace Vaccumlab.Implementations;
 
 /// <summary>
 /// Class merge group of consecutive characters on the word,
 /// when word ends on the consonants then remove consonants
+/// A group of consecutive consonants should be merged to the first single consonant
+/// A group of consecutive vowels should be merged to the last single vowel
 /// </summary>
 internal class CharacterMerger : ICharacterMerger
 {
@@ -33,10 +37,5 @@ internal class CharacterMerger : ICharacterMerger
         }
         
         return sb.ToString();
-    }
-
-    public string Process(string word)
-    {
-        throw new NotImplementedException();
     }
 }

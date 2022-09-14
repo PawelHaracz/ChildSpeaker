@@ -1,5 +1,7 @@
-namespace Vaccumlab;
 using System.Text;
+using Vaccumlab.Contracts;
+
+namespace Vaccumlab.Implementations;
 
 internal class ChildSpeaker : IChildSpeaker
 {
