@@ -14,6 +14,7 @@ public class CharacterMergerTests
     [InlineData("mapa", "mapa")]
     [InlineData("obelisk", "obelis")]
     [InlineData("ababa", "ababa")]
+    [InlineData("abcdefghijklmnopqrstuvwxyz", "abefijopuvyz")]
     public void word_does_not_have_any_group_of_consecutive_characters(string word, string expected)
     {
         var act = Act(word);
