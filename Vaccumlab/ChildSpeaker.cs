@@ -13,12 +13,19 @@ public class ChildSpeaker
         if (Vowels.Contains(firstCharacter))
         {
             //vowels = logic
-            return sb.ToString();
+            for (int i = 1; i < word.Length; i++)
+            {
+                if (Consonants.Contains(word[i]))
+                {
+                    firstCharacter = word[i];
+                    sb.Append(firstCharacter);
+                    break;
+                }
+            }
         }
-
-        sb.Append(firstCharacter);
+        
         //ignore first character
-        for (int i = 1; i < word.Length; i++)
+        for (int i = 0; i < word.Length; i++)
         {
             if (Consonants.Contains(word[i]))
             {
