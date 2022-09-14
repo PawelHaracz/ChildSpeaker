@@ -28,7 +28,7 @@ internal class CharacterMerger : ICharacterMerger
                     character = nextCharacter;
                     i = j;
                 }
-                if (Constants.Consonants.Contains(currentCharacter) && Constants.Consonants.Contains(nextCharacter))
+                else if (Constants.Consonants.Contains(currentCharacter) && Constants.Consonants.Contains(nextCharacter))
                 {
                     i = j;
                 }
@@ -43,49 +43,4 @@ internal class CharacterMerger : ICharacterMerger
 
         return sb.ToString();
     }
-    
-    // public string Merge(string word)
-    // {
-    //     var sb = new StringBuilder();
-    //
-    //     for (int i = 0; i < word.Length; i++)
-    //     {
-    //         if (Constants.Vowels.Contains(word[i]))
-    //         {
-    //             var vowel = word[i];
-    //             for (int j = i + 1; j < word.Length; j++)
-    //             {
-    //                 if (Constants.Vowels.Contains(word[j]))
-    //                 { 
-    //                     vowel = word[j];
-    //                     i = j;
-    //                     break;
-    //                 }
-    //                 
-    //             }
-    //             sb.Append(vowel);
-    //         }
-    //         else
-    //         {
-    //             for (int j = i + 1; j < word.Length; j++)
-    //             {
-    //                 //skip all next Consonants
-    //                 if (Constants.Vowels.Contains(word[j]))
-    //                 {
-    //                     sb.Append(word[i]);
-    //                     i = j-1;
-    //                     break;
-    //                 }
-    //             }
-    //         }
-    //     }
-    //
-    //     // var lastCharacters = word.Last();
-    //     // if (Constants.Vowels.Contains(lastCharacters))
-    //     // {
-    //     //     sb.Append(lastCharacters);
-    //     // }
-    //     //
-    //     return sb.ToString();
-    // }
 }
