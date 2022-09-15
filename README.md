@@ -31,6 +31,7 @@ uzywany jest tylko angielski alfabet `abcdefghijklmnopqrstuvwxyz`, wyrazy zawsza
 ### przyklad
 
 #### input
+```
 mapa
 mama
 alan
@@ -38,14 +39,17 @@ island
 lajdak
 aba
 alan
+```
 
 #### output
+```
 alan 2
 aba 0
 island 2
 lajdak 2
 mama 1
 mapa 1
+```
 
 #### wyjasnienie
 
